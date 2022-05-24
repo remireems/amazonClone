@@ -4,7 +4,9 @@ import './App.css'
 function App() {
   return (
     <div className="app">
-      Hello world
+      Hello world 
+      {/* Navbar */}
+      {/* home */}
     </div>
   );
 }
