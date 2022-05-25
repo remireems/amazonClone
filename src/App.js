@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
+import Checkout from './components/Checkout/Checkout'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css'
 
