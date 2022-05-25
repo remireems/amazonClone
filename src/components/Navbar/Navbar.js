@@ -1,7 +1,7 @@
 import { Search, ShoppingBasket } from '@mui/icons-material'
 import './Navbar.css'
 
-function Navbar() {
+const Navbar = () => {
   return (
     <div className='navbar'>
       <img className='navLogo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazonLogo" />
