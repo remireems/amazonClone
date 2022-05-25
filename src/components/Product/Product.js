@@ -1,6 +1,23 @@
+import { useStateValue } from '../../StateProvider'
 import './Product.css'
 
-const Product = ({ id, title, price, image, rating}) => {
+const Product = ({ id, title, price, image, rating }) => {
+
+  const [{ cart }, dispatch] = useStateValue()
+  console.log('this is the cart >>', cart)
+  const addToCart = () => {
+    dispatch({
+      type: 'addItem',
+      item: {
+        id: id,
+        title: title,
+        price: price,
+        image: image,
+        rating: rating
+      }
+    })
+  }
+
   return (
     <div className='product'>
       <div className="productInfo">
@@ -11,13 +28,13 @@ const Product = ({ id, title, price, image, rating}) => {
         </p>
         <div className="productRating">
           {Array(rating).fill().map((_, i) => (<p>🌟</p>))}
-          
+
         </div>
       </div>
 
       <img src={image} alt="" />
 
-      <button>Add to Cart</button>
+      <button onClick={addToCart}>Add to Cart</button>
 
     </div>
   )
