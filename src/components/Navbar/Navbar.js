@@ -1,17 +1,23 @@
 import { Search, ShoppingCart } from '@mui/icons-material'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <img className='navLogo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazonLogo" />
+
+      <Link to='/'>
+        <img className='navLogo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazonLogo" />
+      </Link>
+
+
 
       <div className="navSearch">
         <input
           type="text"
           className='navSearchInput'
-          />
-        <Search className='searchIcon'/>
+        />
+        <Search className='searchIcon' />
       </div>
 
       <div className="navTabs">
@@ -29,10 +35,15 @@ const Navbar = () => {
           <span className='navTabLnOne'>Your</span>
           <span className='navTabLnTwo'>Prime</span>
         </div>
-        <div className="navCartIcon">
-          <ShoppingCart />
-          <span className='navTabLnTwo cartCounter'>0</span>
-        </div>
+
+        <Link to='/checkout'>
+          <div className="navCartIcon">
+            <ShoppingCart />
+            <span className='navTabLnTwo cartCounter'>0</span>
+          </div>
+        </Link>
+
+
       </div>
     </div>
   )
