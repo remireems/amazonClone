@@ -58,13 +58,13 @@
   font-weight: 800;
 }
 
-.navBasketIcon {
+.navCartIcon {
   display: flex;
   align-items: center;
   color: white;
 }
 
-.basketCounter {
+.cartCounter {
   margin-left: 10px;
   margin-right: 10px;
 }

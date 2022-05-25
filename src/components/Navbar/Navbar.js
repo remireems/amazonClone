@@ -1,4 +1,4 @@
-import { Search, ShoppingBasket } from '@mui/icons-material'
+import { Search, ShoppingCart } from '@mui/icons-material'
 import './Navbar.css'
 
 const Navbar = () => {
@@ -29,9 +29,9 @@ const Navbar = () => {
           <span className='navTabLnOne'>Your</span>
           <span className='navTabLnTwo'>Prime</span>
         </div>
-        <div className="navBasketIcon">
-          <ShoppingBasket />
-          <span className='navTabLnTwo basketCounter'>0</span>
+        <div className="navCartIcon">
+          <ShoppingCart />
+          <span className='navTabLnTwo cartCounter'>0</span>
         </div>
       </div>
     </div>
