@@ -1,3 +1,4 @@
+import Product from '../Product/Product'
 import './Home.css'
 
 const Home = () => {
@@ -8,15 +9,18 @@ const Home = () => {
       </div>
 
       <div className="homeRow">
-
+        <Product />
+        <Product />
       </div>
 
       <div className="homeRow">
-
+        <Product />
+        <Product />
+        <Product />
       </div>
 
       <div className="homeRow">
-
+        <Product />
       </div>
 
     </div>
