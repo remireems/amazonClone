@@ -1,3 +1,4 @@
+import { Search, ShoppingBasket } from '@mui/icons-material'
 import './Navbar.css'
 
 function Navbar() {
@@ -8,7 +9,9 @@ function Navbar() {
       <div className="navSearch">
         <input
           type="text"
-          className='navSearchInput' />
+          className='navSearchInput'
+          />
+        <Search className='searchIcon'/>
       </div>
 
       <div className="navTabs">
@@ -26,8 +29,9 @@ function Navbar() {
           <span className='navTabLnOne'>Your</span>
           <span className='navTabLnTwo'>Prime</span>
         </div>
-        <div className="navTab">
-
+        <div className="navBasketIcon">
+          <ShoppingBasket />
+          <span className='navTabLnTwo basketCounter'>0</span>
         </div>
       </div>
     </div>

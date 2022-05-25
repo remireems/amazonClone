@@ -14,3 +14,57 @@
   margin: 0 20px;
   margin-top: 18px;
 }
+
+.navSearch {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+  
+}
+
+.navSearchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+
+.navTabs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navTab {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navTabLnOne {
+  font-size: 10px;
+}
+
+.navTabLnTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.navBasketIcon {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.basketCounter {
+  margin-left: 10px;
+  margin-right: 10px;
+}
