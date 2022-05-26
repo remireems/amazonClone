@@ -25,10 +25,14 @@ const Navbar = () => {
       </div>
 
       <div className="navTabs">
-        <div className="navTab">
-          <span className='navTabLnOne'>Hello Guest</span>
-          <span className='navTabLnTwo'>Sign In</span>
-        </div>
+
+        <Link to='/signin'>
+          <div className="navTab">
+            <span className='navTabLnOne'>Hello Guest</span>
+            <span className='navTabLnTwo'>Sign In</span>
+          </div>
+        </Link>
+
 
         <div className="navTab">
           <span className='navTabLnOne'>Returns</span>
