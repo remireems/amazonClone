@@ -1,3 +1,4 @@
+import CheckoutProduct from '../CheckoutProduct/CheckoutProduct'
 import Subtotal from '../Subtotal/Subtotal'
 import './Checkout.css'
 
@@ -9,7 +10,11 @@ const Checkout = () => {
 
         <div>
           <h2 className="checkoutTitle">Your shopping basket</h2>
+
+          <CheckoutProduct />
+
         </div>
+
       </div>
 
       <div className="checkoutRight">
