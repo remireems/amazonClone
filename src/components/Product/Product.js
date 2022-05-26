@@ -4,7 +4,7 @@ import './Product.css'
 const Product = ({ id, title, price, image, rating }) => {
 
   const [{ cart }, dispatch] = useStateValue()
-  console.log('this is the cart >>', cart)
+  
   const addToCart = () => {
     dispatch({
       type: 'addItem',
