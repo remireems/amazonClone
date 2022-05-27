@@ -5,11 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 import SignIn from './components/SignIn/SignIn';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="app">
-        
+
         <Routes>
           <Route path='/' element={<><Navbar /><Home /></>} />
           <Route path='/signin' element={<SignIn />} />
