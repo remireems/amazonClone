@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <Link to={!user && '/signin'}>
           <div onClick={handleAuth} className="navTab">
-            <span className='navTabLnOne'>Hello Guest</span>
+            <span className='navTabLnOne'>{user ? `Hello, ${user.email}` : 'Hello, Guest'}</span>
             <span className='navTabLnTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
