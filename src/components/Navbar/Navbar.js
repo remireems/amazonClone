@@ -33,7 +33,7 @@ const Navbar = () => {
 
       <div className="navTabs">
 
-        <Link to={!user && '/signin'}>
+        <Link to={!user && '/signin'} style={{textDecoration: 'none'}}>
           <div onClick={handleAuth} className="navTab">
             <span className='navTabLnOne'>{user ? `Hello, ${user.email}` : 'Hello, Guest'}</span>
             <span className='navTabLnTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
@@ -51,7 +51,7 @@ const Navbar = () => {
           <span className='navTabLnTwo'>Prime</span>
         </div>
 
-        <Link to='/checkout'>
+        <Link to='/checkout' style={{ textDecoration: 'none' }}>
           <div className="navCartIcon">
             <ShoppingCart />
             <span className='navTabLnTwo cartCounter'>{cart?.length}</span>
