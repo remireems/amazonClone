@@ -18,6 +18,12 @@ const SignIn = () => {
   const signIn = e => {
     e.preventDefault()
     // firebase sign in stuff
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then(auth => {
+        navigate('/')
+      })
+      .catch(error => alert(error.message))
   }
 
   const register = e => {
@@ -25,7 +31,7 @@ const SignIn = () => {
 
     auth
       .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
+      .then(auth => {
         // it successfully created a new user with email and password
         if (auth) {
           navigate('/')
