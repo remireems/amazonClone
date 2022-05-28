@@ -1,11 +1,18 @@
-import { Search, ShoppingCart } from '@mui/icons-material'
+import { AutoFixHigh, Search, ShoppingCart } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import { useStateValue } from '../../StateProvider'
+import { auth } from '../../firebase'
 import './Navbar.css'
 
 const Navbar = () => {
 
-  const [{ cart }, dispatch] = useStateValue()
+  const [{ cart, user }, dispatch] = useStateValue()
+
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut()
+    }
+  }
 
   return (
     <div className='navbar'>
@@ -26,10 +33,10 @@ const Navbar = () => {
 
       <div className="navTabs">
 
-        <Link to='/signin'>
-          <div className="navTab">
+        <Link to={!user && '/signin'}>
+          <div onClick={handleAuth} className="navTab">
             <span className='navTabLnOne'>Hello Guest</span>
-            <span className='navTabLnTwo'>Sign In</span>
+            <span className='navTabLnTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
 
