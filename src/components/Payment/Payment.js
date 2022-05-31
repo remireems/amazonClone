@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import CurrencyFormat from 'react-currency-format'
 import { getCartTotal } from '../../reducer'
 import axios from '../../axios'
+import { db } from '../../firebase'
 
 
 const Payment = () => {
@@ -38,6 +39,7 @@ const Payment = () => {
   }, [cart])
 
   console.log('the secret is >>>', clientSecret)
+  console.log('USER >>', user)
 
   const handleSubmit = async (event) => {
     // stripe stuff
@@ -53,6 +55,20 @@ const Payment = () => {
     })
       .then(({ paymentIntent }) => {
         // paymentIntnet = payment confirmation
+        
+
+        db
+          .collection('users')
+          .doc(user?.uid)
+          .collection('orders')
+          .doc(paymentIntent.id)
+          .set({
+            cart: cart,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created
+          })
+
+          
         setSucceeded(true)
         setError(null)
         setProcessing(false)
@@ -66,6 +82,8 @@ const Payment = () => {
       })
 
   }
+
+
 
   const handleChange = e => {
     // listen for changes in the CardElement
