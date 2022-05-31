@@ -37,6 +37,8 @@ const Payment = () => {
     getClientSecret()
   }, [cart])
 
+  console.log('the secret is >>>', clientSecret)
+
   const handleSubmit = async (event) => {
     // stripe stuff
     event.preventDefault()
