@@ -57,6 +57,10 @@ const Payment = () => {
         setError(null)
         setProcessing(false)
 
+        dispatch({
+          type: 'emptyCart'
+        })
+
         navigate('/orders', { replace: true })
 
       })
