@@ -15,7 +15,6 @@ const reducer = (state, action) => {
         cart: [...state.cart, action.item]
       }
     case 'removeItem':
-
       const index = state.cart.findIndex((cartItem) => cartItem.id === action.id)
       let newCart = [...state.cart]
       if (index >= 0) {
@@ -23,7 +22,6 @@ const reducer = (state, action) => {
       } else {
         console.warn(`Can't remove product (id: ${action.id}) as its not in cart!`)
       }
-
       return {
         ...state,
         cart: newCart
@@ -38,7 +36,6 @@ const reducer = (state, action) => {
         ...state,
         cart: []
       }
-
     default:
       return state
   }

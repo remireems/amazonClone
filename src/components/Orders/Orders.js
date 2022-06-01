@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import { db } from '../../firebase'
-import { useStateValue } from '../../StateProvider'
 import Order from '../Order/Order'
+import { db } from '../../firebase'
+import { useEffect, useState } from 'react'
+import { useStateValue } from '../../StateProvider'
 import './Orders.css'
 
 const Orders = () => {
@@ -11,8 +11,7 @@ const Orders = () => {
 
   useEffect(() => {
     if (user) {
-      db
-        .collection('users')
+      db.collection('users')
         .doc(user?.uid)
         .collection('orders')
         .orderBy('created', 'desc')
@@ -25,19 +24,16 @@ const Orders = () => {
     } else {
       setOrders([])
     }
-
   }, [user])
 
   return (
     <div className="orders">
       <h1>Your Orders</h1>
-
       <div className="ordersCont">
         {orders?.map(order => (
           <Order order={order} />
         ))}
       </div>
-
     </div>
   )
 }
