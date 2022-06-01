@@ -33,18 +33,20 @@ const Navbar = () => {
 
       <div className="navTabs">
 
-        <Link to={!user && '/signin'} style={{textDecoration: 'none'}}>
+        <Link to={!user && '/signin'} style={{ textDecoration: 'none' }}>
           <div onClick={handleAuth} className="navTab">
             <span className='navTabLnOne'>Hello, {!user ? 'Guest' : user.email}</span>
             <span className='navTabLnTwo'>{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
 
+        <Link to='/orders'>
+          <div className="navTab">
+            <span className='navTabLnOne'>Returns</span>
+            <span className='navTabLnTwo'>& Orders</span>
+          </div>
+        </Link>
 
-        <div className="navTab">
-          <span className='navTabLnOne'>Returns</span>
-          <span className='navTabLnTwo'>& Orders</span>
-        </div>
 
         <div className="navTab">
           <span className='navTabLnOne'>Your</span>
