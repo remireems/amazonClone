@@ -3,7 +3,7 @@ import './Product.css'
 
 const Product = ({ id, title, price, image, rating }) => {
 
-  const [{ cart }, dispatch] = useStateValue()
+  const [{ cart, user }, dispatch] = useStateValue()
   
   const addToCart = () => {
     dispatch({
@@ -33,8 +33,7 @@ const Product = ({ id, title, price, image, rating }) => {
 
       <img src={image} alt={title} />
 
-      <button onClick={addToCart}>Add to Cart</button>
-
+      {!user ? '' : <button onClick={addToCart}>Add to Cart</button>}
     </div>
   )
 }

@@ -20,10 +20,6 @@ const SignIn = () => {
       .catch(error => alert('There is no account with that email address! Please create a new account.'))
   }
 
-  const handleRegister = () => {
-    navigate('/register')
-  }
-
   return (
     <div className="signIn">
       <Link to='/'>
@@ -52,7 +48,7 @@ const SignIn = () => {
           By signing in, you agree to the fakeAmazon's Conditions of Use and Privacy Notice.
         </p>
 
-        <button className='registerBtn' onClick={handleRegister}>Create your Amazon account</button>
+        <button className='registerBtn' onClick={e => navigate('/register')}>Create your Amazon account</button>
 
       </div>
     </div>

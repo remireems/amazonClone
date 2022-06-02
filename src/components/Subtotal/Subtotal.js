@@ -8,7 +8,7 @@ const Subtotal = () => {
 
   const navigate = useNavigate()
 
-  const [{ cart }, dispatch] = useStateValue()
+  const [{ cart, user }, dispatch] = useStateValue()
   
   return (
     <div className="subtotal">
@@ -30,7 +30,7 @@ const Subtotal = () => {
         prefix={'$'}
       />
 
-      <button onClick={e => navigate('/payment')}>Proceed to Checkout</button>
+      {!user ? <button>Sign in to Proceed to Checkout</button> : <button onClick={e => navigate('/payment')}>Proceed to Checkout</button>}      
     </div>
   )
 }

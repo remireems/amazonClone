@@ -23,10 +23,6 @@ const Register = () => {
       .catch(error => alert(error.message))
   }
 
-  const handleSignIn = () => {
-    navigate('/signin')
-  }
-
   return (
     <div className="signIn">
       <Link to='/'>
@@ -56,7 +52,7 @@ const Register = () => {
           By creating an account, you agree to the fakeAmazon's Conditions of Use and Privacy Notice.
         </p>
 
-        <button className='registerBtn' onClick={handleSignIn}>Already have an account? Sign-In</button>
+        <button className='registerBtn' onClick={e => navigate('/signin')}>Already have an account? Sign-In</button>
 
       </div>
     </div>
