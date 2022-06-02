@@ -25,42 +25,44 @@
   padding: 20px;
 }
 
-.signInCont > h1 {
+.signInCont>h1 {
   font-weight: 500;
   margin-bottom: 20px;
 }
 
-.signInCont > form > h5 {
+.signInCont>form>h5 {
   margin-bottom: 5px;
 }
 
-.signInCont > form > input {
+.signInCont>form>input {
   height: 30px;
   margin-bottom: 10px;
   background-color: white;
   width: 98%;
+  border-radius: 5px;
+  border: 1px solid;
 }
 
-.signInCont > p {
+.signInCont>p {
   margin-top: 15px;
   font-size: 12px;
 }
 
 .signInBtn {
-    background: #f0c14b;
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29;
-  }
+  background: #FFD814;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+}
 
-  .signInRegisterBtn {
-    border-radius: 2px;
-    width: 100%;
-    height: 30px;
-    border: 1px solid;
-    margin-top: 10px;
-    border-color: darkgray;
-  }
+.registerBtn {
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: darkgray;
+}

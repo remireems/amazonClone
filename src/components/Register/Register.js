@@ -1,27 +1,30 @@
 import { useState } from 'react'
 import { auth } from '../../firebase'
 import { Link, useNavigate } from 'react-router-dom'
-import './SignIn.css'
+import '../SignIn/SignIn.css'
 
-const SignIn = () => {
+const Register = () => {
 
   const navigate = useNavigate()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const signIn = event => {
+  const register = event => {
     event.preventDefault()
-    // firebase sign in
-    auth.signInWithEmailAndPassword(email, password)
+
+    auth.createUserWithEmailAndPassword(email, password)
       .then(auth => {
-        navigate('/')
+        // it successfully created a new user with email and password
+        if (auth) {
+          navigate('/')
+        }
       })
-      .catch(error => alert('There is no account with that email address! Please create a new account.'))
+      .catch(error => alert(error.message))
   }
 
-  const handleRegister = () => {
-    navigate('/register')
+  const handleSignIn = () => {
+    navigate('/signin')
   }
 
   return (
@@ -31,7 +34,7 @@ const SignIn = () => {
       </Link>
 
       <div className="signInCont">
-        <h1>Sign-in</h1>
+        <h1>Create account</h1>
         <form>
           <h5>Email</h5>
           <input
@@ -42,21 +45,22 @@ const SignIn = () => {
           <h5>Password</h5>
           <input
             type="password"
+            placeholder=' At least 6 characters'
             value={password}
             onChange={e => setPassword(e.target.value)} />
 
-          <button className='signInBtn' type='submit' onClick={signIn}>Sign In</button>
+          <button className='signInBtn' type='submit' onClick={register}>Create Account</button>
         </form>
 
         <p>
-          By signing in, you agree to the fakeAmazon's Conditions of Use and Privacy Notice.
+          By creating an account, you agree to the fakeAmazon's Conditions of Use and Privacy Notice.
         </p>
 
-        <button className='registerBtn' onClick={handleRegister}>Create your Amazon account</button>
+        <button className='registerBtn' onClick={handleSignIn}>Already have an account? Sign-In</button>
 
       </div>
     </div>
   )
 }
 
-export default SignIn
+export default Register

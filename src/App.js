@@ -9,6 +9,7 @@ import SignIn from './components/SignIn/SignIn'
 import Payment from './components/Payment/Payment'
 import { Elements } from '@stripe/react-stripe-js'
 import Checkout from './components/Checkout/Checkout'
+import Register from './components/Register/Register'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
@@ -44,6 +45,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<><Navbar /><Home /></>} />
           <Route path='/signin' element={<SignIn />} />
+          <Route path='/register' element={<Register />} />
           <Route path='/checkout' element={<><Navbar /><Checkout /></>} />
           <Route path='/payment' element={<><Navbar /><Elements stripe={promise}><Payment /></Elements></>} />
           <Route path='/orders' element={<><Navbar /><Orders /></>} />
