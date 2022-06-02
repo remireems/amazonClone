@@ -23,14 +23,12 @@ const CheckoutProduct = ({ id, image, title, price, rating, hideButton }) => {
           <strong>{price}</strong>
         </p>
         <div className="checkoutProductRating">
-          {Array(rating).fill().map((_, i) => (<p>🌟</p>))}
+          {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
         </div>
         {!hideButton && (
           <button onClick={removeFromCart}>Remove from Cart</button>
         )}
-
       </div>
-
     </div>
   )
 }
