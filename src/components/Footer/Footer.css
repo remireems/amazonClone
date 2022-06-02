@@ -1,0 +1,14 @@
+.footer {
+  height: 60px;
+  background-color: #232F3E;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerUL>li {
+  display: inline;
+  padding: 0 6px;
+  font-size: 14px;
+}
