@@ -10,23 +10,53 @@ const Home = () => {
 
       <div className="homeRow">
         <Product 
-          id='12345'
-          title='Apple'
-          price={5.99}
-          image='https://media.istockphoto.com/photos/red-apple-with-leaf-isolated-on-white-background-picture-id185262648?b=1&k=20&m=185262648&s=170667a&w=0&h=2ouM2rkF5oBplBmZdqs3hSOdBzA4mcGNCoF2P0KUMTM='
+          id='1'
+          title='Rachael Ray Cucina Nonstick Bakeware Set Baking Cookie Sheets Cake Muffin Bread Pan, 10 Piece, Latte Brown with Cranberry Red Grips'
+          price={109.99}
+          image='https://m.media-amazon.com/images/I/91E9pmUWQAL._AC_SL1500_.jpg'
           rating={5}
         />
-        <Product />
+        <Product 
+          id='2'
+          title='Lopkey Artificial Daisy Flowers Outdoor Indoor Patio Lawn Garden Hanging Basket with Chain Flowerpot,10 inch Dark Purple'
+          price={29.99}
+          image='https://m.media-amazon.com/images/I/71v0CyDo3qL._AC_SL1002_.jpg'
+          rating={4}
+        />
       </div>
 
       <div className="homeRow">
-        <Product />
-        <Product />
-        <Product />
+        <Product 
+          id='3'
+          title='Beats Solo3 Wireless On-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time, Built-in Microphone - Rose Gold (Latest Model)'
+          price={199.95}
+          image='https://m.media-amazon.com/images/I/51PbyjVSxsL._AC_SL1000_.jpg'
+          rating={5}
+        />
+        <Product
+          id='4'
+          title='2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 512GB SSD Storage) - Space Gray'
+          price={1499.00}
+          image='https://m.media-amazon.com/images/I/71an9eiBxpL._AC_SL1500_.jpg'
+          rating={5}
+        />
+        <Product
+          id='5'
+          title='Eterish Orthopedic Dog Bed for Medium, Large Dogs, Egg-Crate Foam Dog Bed with Removable Cover, Pet Bed Machine Washable, Grey'
+          price={45.99}
+          image=''
+          rating={4}
+        />
       </div>
 
       <div className="homeRow">
-        <Product />
+        <Product
+          id='6'
+          title='SAMSUNG 75-Inch Class Neo QLED QN90A Series - 4K UHD Quantum HDR 32x Smart TV with Alexa Built-in (QN75QN90AAFXZA, 2021 Model)'
+          price={2597.99}
+          image='https://m.media-amazon.com/images/I/913+l9CB6cL._AC_SL1500_.jpg'
+          rating={5}
+        />
       </div>
 
     </div>
