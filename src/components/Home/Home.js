@@ -28,21 +28,21 @@ const Home = () => {
       <div className="homeRow">
         <Product 
           id='3'
-          title='Beats Solo3 Wireless On-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time, Built-in Microphone - Rose Gold (Latest Model)'
+          title='Beats Solo3 Wireless Headphones: Bluetooth, 40 Hours of Listening, Microphone - Rose Gold'
           price={199.95}
           image='https://m.media-amazon.com/images/I/51PbyjVSxsL._AC_SL1000_.jpg'
           rating={5}
         />
         <Product
           id='4'
-          title='2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 512GB SSD Storage) - Space Gray'
+          title='2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 512GB Storage) - Space Gray'
           price={1499.00}
           image='https://m.media-amazon.com/images/I/71an9eiBxpL._AC_SL1500_.jpg'
           rating={5}
         />
         <Product
           id='5'
-          title='Eterish Orthopedic Dog Bed for Medium, Large Dogs, Egg-Crate Foam Dog Bed with Removable Cover, Pet Bed Machine Washable, Grey'
+          title='Eterish Orthopedic Dog Bed for Large Dogs, Egg-Crate Foam Dog Bed with Removable Cover - Grey'
           price={45.99}
           image='https://m.media-amazon.com/images/I/61NwV9AxxML._AC_SL1500_.jpg'
           rating={4}

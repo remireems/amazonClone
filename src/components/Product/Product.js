@@ -27,12 +27,11 @@ const Product = ({ id, title, price, image, rating }) => {
           <strong>{price}</strong>
         </p>
         <div className="productRating">
-          {Array(rating).fill().map((_, i) => (<p>🌟</p>))}
-
+          {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
         </div>
       </div>
 
-      <img src={image} alt="" />
+      <img src={image} alt={title} />
 
       <button onClick={addToCart}>Add to Cart</button>
 
