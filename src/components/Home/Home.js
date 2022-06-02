@@ -44,7 +44,7 @@ const Home = () => {
           id='5'
           title='Eterish Orthopedic Dog Bed for Medium, Large Dogs, Egg-Crate Foam Dog Bed with Removable Cover, Pet Bed Machine Washable, Grey'
           price={45.99}
-          image=''
+          image='https://m.media-amazon.com/images/I/61NwV9AxxML._AC_SL1500_.jpg'
           rating={4}
         />
       </div>
