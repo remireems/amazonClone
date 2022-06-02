@@ -1,3 +1,4 @@
+import Footer from '../Footer/Footer'
 import Product from '../Product/Product'
 import './Home.css'
 
@@ -59,6 +60,7 @@ const Home = () => {
         />
       </div>
 
+      <Footer />
     </div>
   )
 }
