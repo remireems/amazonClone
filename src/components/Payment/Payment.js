@@ -92,14 +92,14 @@ const Payment = () => {
           </div>
           <div className="paymentAddress">
             <p>{user?.email}</p>
-            <p>123 React Lane</p>
+            <p>123 Code Street</p>
             <p>Los Angeles, CA</p>
           </div>
         </div>
 
         <div className="paymentSection">
           <div className="paymentTitle">
-            <h3>Review items and delivery</h3>
+            <h3>Review Items</h3>
           </div>
           <div className="paymentItems">
             {cart.map(item => (
