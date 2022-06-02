@@ -1,17 +1,20 @@
 .navbar {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  background-color: #131921;
   position: sticky;
   top: 0;
   z-index: 3;
 }
 
+.navbarTop {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+}
+
 .navLogo {
   width: 100px;
   object-fit: contain;
-  margin: 0 20px;
+  margin: 0 10px;
   margin-top: 18px;
 }
 
@@ -20,7 +23,6 @@
   flex: 1;
   align-items: center;
   border-radius: 24px;
-  
 }
 
 .navSearchInput {
@@ -28,12 +30,14 @@
   padding: 10px;
   border: none;
   width: 100%;
+  border-radius: 4px 0 0 4px;
 }
 
 .searchIcon {
   padding: 5px;
   height: 22px !important;
-  background-color: #cd9042;
+  border-radius: 0 4px 4px 0;
+  background-color: #febd69;
 }
 
 .navTabs {
@@ -67,4 +71,45 @@
 .cartCounter {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.navbarBottom {
+  background-color: #232f3e;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbarBottomLeft {
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+  padding: 8px 9px;
+}
+
+.navbarBottomLeft>span {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.navbarBottomMid {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  flex: 2;
+}
+
+.navbarBottomMid>p {
+  margin: 2px 0;
+  padding: 8px 9px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navbarBottomRight {
+  margin: 2px 0;
+  padding: 8px 9px;
+  font-size: 15px;
+  font-weight: bold;
 }
