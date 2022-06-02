@@ -11,7 +11,6 @@ import { Elements } from '@stripe/react-stripe-js'
 import Checkout from './components/Checkout/Checkout'
 import Register from './components/Register/Register'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
 
 const promise = loadStripe('pk_test_51L5HH6DJT4I0sNbuR7Yw4aCSMpd7MOTmBUByatXKE1GFN1wOMGNWXTLYxmKuosZYIbJMpWTVEas8fALr0JFAfxsD00d6Nn8RBt')
 

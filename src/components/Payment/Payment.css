@@ -49,3 +49,10 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+
+.paymentFooter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

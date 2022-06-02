@@ -1,7 +1,14 @@
-.orders {
+.ordersCont {
   padding: 20px 80px;
 }
 
-.orders > h1 {
+.ordersCont>h1 {
   margin: 30px 0;
+}
+
+.ordersFooter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

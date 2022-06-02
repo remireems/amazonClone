@@ -15,7 +15,6 @@ const Navbar = () => {
   }
 
   return (
-
     <div className='navbar'>
       <div className='navbarTop'>
         <Link to='/'>

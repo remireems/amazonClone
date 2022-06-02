@@ -1,5 +1,6 @@
 import axios from '../../axios'
 import { db } from '../../firebase'
+import Footer from '../Footer/Footer'
 import { useEffect, useState } from 'react'
 import { getCartTotal } from '../../reducer'
 import { useStateValue } from '../../StateProvider'
@@ -143,8 +144,11 @@ const Payment = () => {
             </form>
           </div>
         </div>
-
       </div>
+
+      <div className="paymentFooter">
+        <Footer />
+      </div>      
     </div>
   )
 }
