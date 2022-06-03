@@ -32,7 +32,7 @@ const Home = () => {
           title='Beats Solo3 Wireless Headphones: Bluetooth, 40 Hours of Listening, Microphone - Rose Gold'
           price={199.95}
           image='https://m.media-amazon.com/images/I/51PbyjVSxsL._AC_SL1000_.jpg'
-          rating={5}
+          rating={4.5}
         />
         <Product
           id='4'
@@ -46,7 +46,7 @@ const Home = () => {
           title='Eterish Orthopedic Dog Bed for Large Dogs, Egg-Crate Foam Dog Bed with Removable Cover - Grey'
           price={45.99}
           image='https://m.media-amazon.com/images/I/61NwV9AxxML._AC_SL1500_.jpg'
-          rating={4}
+          rating={4.5}
         />
       </div>
 

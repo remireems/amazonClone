@@ -30,10 +30,6 @@
   margin-top: 5px;
 }
 
-.productRating {
-  display: flex;
-}
-
 .product>button {
   background: #FFD814;
   border: 1px solid;

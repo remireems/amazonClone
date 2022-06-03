@@ -1,3 +1,4 @@
+import { Rating } from '@mui/material'
 import { useStateValue } from '../../StateProvider'
 import './Product.css'
 
@@ -27,7 +28,7 @@ const Product = ({ id, title, price, image, rating }) => {
           <strong>{price}</strong>
         </p>
         <div className="productRating">
-          {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
+          <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly/>
         </div>
       </div>
 

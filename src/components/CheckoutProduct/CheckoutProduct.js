@@ -1,3 +1,4 @@
+import { Rating } from '@mui/material'
 import { useStateValue } from '../../StateProvider'
 import './CheckoutProduct.css'
 
@@ -23,7 +24,7 @@ const CheckoutProduct = ({ id, image, title, price, rating, hideButton }) => {
           <strong>{price}</strong>
         </p>
         <div className="checkoutProductRating">
-          {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
+          <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly />
         </div>
         {!hideButton && (
           <button onClick={removeFromCart}>Remove from Cart</button>
