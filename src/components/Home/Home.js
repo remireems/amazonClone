@@ -1,23 +1,62 @@
 import Footer from '../Footer/Footer'
 import Product from '../Product/Product'
+import { useTheme } from '@mui/material'
+import SwipeableViews from 'react-swipeable-views'
+import { autoPlay } from 'react-swipeable-views-utils'
 import './Home.css'
+import { useState } from 'react'
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
+
+const images = [
+  {
+    title: 'amazonPrimeVideoPic',
+    link: 'https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'
+  },
+  {
+    title: 'amazonAlexaEchoDot',
+    link: 'https://m.media-amazon.com/images/I/61lpWz5wudL._SX3000_.jpg'
+  },
+  {
+    title: 'amazonFire7Kids',
+    link: 'https://m.media-amazon.com/images/I/91QbQ7hgYHL._SX3000_.jpg'
+  }
+]
 
 const Home = () => {
+
+  const theme = useTheme()
+  const [activeStep, setActiveStep] = useState(0)
+
+  const handleStepChange = step => {
+    setActiveStep(step)
+  }
+
   return (
     <div className='home'>
-      <div className="homeCont">
-        <img className='homeImg' src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="amazonPrimeVideoPic" />
-      </div>
+      <AutoPlaySwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+      >
+        {images.map((step, index) => (
+          <div key={step.title} className='homeCarousel'>
+            {Math.abs(activeStep - index) <= 2 ? (
+              <img className='homeImg' src={step.link} alt={step.title} />
+            ) : null}
+          </div>
+        ))}
+      </AutoPlaySwipeableViews>
 
       <div className="homeRow">
-        <Product 
+        <Product
           id='1'
           title='Rachael Ray Cucina Nonstick Bakeware Set Baking Cookie Sheets Cake Muffin Bread Pan, 10 Piece, Latte Brown with Cranberry Red Grips'
           price={109.99}
           image='https://m.media-amazon.com/images/I/91E9pmUWQAL._AC_SL1500_.jpg'
           rating={5}
         />
-        <Product 
+        <Product
           id='2'
           title='Lopkey Artificial Daisy Flowers Outdoor Indoor Patio Lawn Garden Hanging Basket with Chain Flowerpot,10 inch Dark Purple'
           price={29.99}
@@ -27,7 +66,7 @@ const Home = () => {
       </div>
 
       <div className="homeRow">
-        <Product 
+        <Product
           id='3'
           title='Beats Solo3 Wireless Headphones: Bluetooth, 40 Hours of Listening, Microphone - Rose Gold'
           price={199.95}
@@ -59,7 +98,6 @@ const Home = () => {
           rating={5}
         />
       </div>
-
       <Footer />
     </div>
   )
