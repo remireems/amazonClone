@@ -1,10 +1,10 @@
+import { useState } from 'react'
 import Footer from '../Footer/Footer'
 import Product from '../Product/Product'
 import { useTheme } from '@mui/material'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
 import './Home.css'
-import { useState } from 'react'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
